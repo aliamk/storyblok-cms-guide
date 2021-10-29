@@ -15,7 +15,7 @@ const Home = ({ howToPosts }) => {
     <>
       <div>
         <h3 className={styles.homepage_intro}>
-          {howToPosts[5].homepageIntroduction}
+          {howToPosts[8].homepageIntroduction}
         </h3>
       </div>
 
