@@ -43,7 +43,7 @@ export const getServerSideProps = async (pageContext) => {
     title,
     slug,
     id,
-    introduction,
+    howToIntroduction,
     mainImage,
     images,
     extraInformation
@@ -62,7 +62,7 @@ export const getServerSideProps = async (pageContext) => {
         title: howto.title,
         slug: howto.slug,
         id: howto.id,
-        introduction: howto.introduction,
+        howToIntroduction: howto.howToIntroduction,
         mainImage: howto.mainImage,
         images: howto.images,
         extraInformation: howto.extraInformation,

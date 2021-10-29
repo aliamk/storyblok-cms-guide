@@ -9,6 +9,14 @@
 .main h3 {
   text-align: center;
 }
+
+.homepage_intro {
+  margin: 0 25px;
+  margin-bottom: 3rem;
+  text-align: left;
+  line-height: 1.75rem;
+}
+
 .feed {
   display: flex;
   flex-wrap: nowrap;
@@ -65,6 +73,14 @@
     justify-content: center;
     align-items: center;
   }
+
+  .homepage_intro {
+    margin: 0 25px;
+    margin-bottom: 4rem;
+    text-align: justify;
+    font-size: 20px;
+  }
+
   .feed {
     max-width: 1440px;
     justify-content: space-between;

@@ -13,6 +13,12 @@ const Home = ({ howToPosts }) => {
   console.log("FKJHF: ", howToPosts);
   return (
     <>
+      <div>
+        <h3 className={styles.homepage_intro}>
+          {howToPosts[5].homepageIntroduction}
+        </h3>
+      </div>
+
       <div className={styles.main}>
         {howToPosts && (
           <div className={styles.feed}>
