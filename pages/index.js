@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Toolbar from "../components/Toolbar";
-import { sanityClient } from "../sanity";
+import { sanityClient, PortableText } from "../sanity";
 import { urlFor } from "../sanity";
 import styles from "../styles/Home.module.css";
 
@@ -13,11 +13,17 @@ const Home = ({ howToPosts }) => {
   console.log("FKJHF: ", howToPosts);
   return (
     <>
-      <div>
-        <h3 className={styles.homepage_intro}>
-          {howToPosts[8].homepageIntroduction}
-        </h3>
-      </div>
+      {howToPosts && (
+        <div className={styles.homepage_intro}>
+          {howToPosts.map((howToPost) => (
+            <PortableText
+              key={howToPost._id}
+              blocks={howToPost.homepageIntroduction}
+              className="instructions"
+            />
+          ))}
+        </div>
+      )}
 
       <div className={styles.main}>
         {howToPosts && (

@@ -1,4 +1,4 @@
-import { sanityClient } from "../../sanity";
+import { sanityClient, PortableText } from "../../sanity";
 import Image from "../../components/Image";
 // import styles from "../../styles/how-to-posts.module.css";
 
@@ -6,7 +6,7 @@ const HowToPost = ({
   title,
   slug,
   id,
-  introduction,
+  howToIntroduction,
   mainImage,
   images,
   extraInformation,
@@ -15,7 +15,7 @@ const HowToPost = ({
   return (
     <div className="main_container">
       <h1>{title}</h1>
-      <h2 className="intro">{introduction}</h2>
+      <PortableText blocks={howToIntroduction} className="intro" />
       <div className="main_image_container">
         <Image identifier="main-image" image={mainImage} alt="" />
       </div>
@@ -23,14 +23,14 @@ const HowToPost = ({
         <div className="guide_images">
           {images.map(({ _key, asset, topCaption, bottomCaption }, image) => (
             <div key={_key} className="guide_image_text">
-              <h2>{topCaption}</h2>
+              <PortableText blocks={topCaption} />
               <Image key={_key} identifier="image" image={asset} alt="" />
-              <h2 className="bottom_caption">{bottomCaption}</h2>
+              <PortableText blocks={bottomCaption} className="bottom_caption" />
             </div>
           ))}
         </div>
       )}
-      <h3>{extraInformation}</h3>
+      <PortableText blocks={extraInformation} className="instructions" />
     </div>
   );
 };
