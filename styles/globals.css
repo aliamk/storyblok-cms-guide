@@ -36,13 +36,16 @@ a {
   width: 100vw;
   margin: 0 25px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  width: 3.25rem;
-  height: 1.56rem;
+  width: 6.25rem;
+  height: 3rem;
   background-image: url("../public/images/logo.png");
-  background-size: 3.25rem;
+  background-size: 6.25rem;
   background-repeat: no-repeat;
   cursor: pointer;
   display: flex;
@@ -52,6 +55,11 @@ a {
 
 .logo:hover {
   box-shadow: rgb(0 0 0 /3%) 0 6px 16px;
+}
+
+.site_name {
+  font-size: 20px;
+  margin-top: 1.5rem;
 }
 
 /* Footer */
@@ -141,6 +149,15 @@ a {
 }
 
 @media only screen and (min-width: 600px) {
+  .logo_container {
+    flex-direction: row;
+  }
+
+  .site_name {
+    font-size: 25px;
+    margin-top: 0;
+  }
+
   .footer {
     justify-content: flex-start;
   }
@@ -185,6 +202,9 @@ a {
   .logo_container {
     height: 100%;
     max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .logo {
     width: 12.25rem;

@@ -79,6 +79,13 @@
     margin-bottom: 4rem;
     text-align: justify;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .homepage_intro .instructions {
+    min-width: 1440px;
+    padding: 0 25px;
   }
 
   .feed {
@@ -97,5 +104,12 @@
   .main_image img {
     height: 100%;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1445px) {
+  .homepage_intro .instructions {
+    max-width: 1440px;
+    padding: unset;
   }
 }

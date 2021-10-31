@@ -4,13 +4,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Toolbar from "../components/Toolbar";
 import { sanityClient, PortableText } from "../sanity";
 import { urlFor } from "../sanity";
 import styles from "../styles/Home.module.css";
 
 const Home = ({ howToPosts }) => {
-  console.log("FKJHF: ", howToPosts);
   return (
     <>
       {howToPosts && (
@@ -19,7 +17,7 @@ const Home = ({ howToPosts }) => {
             <PortableText
               key={howToPost._id}
               blocks={howToPost.homepageIntroduction}
-              className="instructions"
+              className={styles.instructions}
             />
           ))}
         </div>

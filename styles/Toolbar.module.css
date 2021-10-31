@@ -37,6 +37,8 @@
   .logo_container {
     width: 8.25rem;
     height: 4.125rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   .main h1 {
@@ -51,6 +53,8 @@
   .logo_container {
     width: 12.25rem;
     height: 6.125rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   .main h1 {
