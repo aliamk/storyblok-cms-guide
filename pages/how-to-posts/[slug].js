@@ -1,6 +1,5 @@
 import { sanityClient, PortableText } from "../../sanity";
 import Image from "../../components/Image";
-
 // import styles from "../../styles/how-to-posts.module.css";
 
 const HowToPost = ({
@@ -18,8 +17,8 @@ const HowToPost = ({
     <>
       <div className="main_container">
         <h1>{title}</h1>
-        <PortableText blocks={howToIntroduction} className="intro" />
         <div className="main_image_container">
+          <PortableText blocks={howToIntroduction} className="intro" />
           <Image identifier="main-image" image={mainImage} alt="" />
         </div>
         {images && (
@@ -28,10 +27,6 @@ const HowToPost = ({
               <div key={_key} className="guide_image_text">
                 <PortableText blocks={topCaption} />
                 <Image key={_key} identifier="image" image={asset} alt="" />
-                <PortableText
-                  blocks={bottomCaption}
-                  className="bottom_caption"
-                />
               </div>
             ))}
           </div>
