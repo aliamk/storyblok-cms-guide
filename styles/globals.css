@@ -42,7 +42,7 @@ a {
 }
 
 .logo {
-  width: 3.25rem;
+  width: 4.25rem;
   height: 1.56rem;
   background-image: url("../public/images/logo_small_bold.svg");
   background-size: 3.25rem;
@@ -99,6 +99,7 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 25px;
+  /* background-color: yellow; */
 }
 
 .main_container h1 {
@@ -115,6 +116,7 @@ a {
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 3rem;
+  /* border: 10px solid yellow; */
 }
 
 .main-image img {
@@ -129,7 +131,7 @@ a {
   overflow: hidden;
 }
 
-.guide_image_text {
+.guide_image {
   margin-bottom: 3rem;
 }
 
@@ -199,7 +201,7 @@ a {
   }
 
   .logo {
-    width: 8.25rem;
+    width: 9.25rem;
     height: 4.125rem;
     background-size: 8.25rem;
   }
@@ -218,7 +220,7 @@ a {
     align-items: center;
   }
   .logo {
-    width: 12.25rem;
+    width: 13.25rem;
     height: 6.125rem;
     background-size: 12.25rem;
   }
@@ -257,17 +259,22 @@ a {
   }
 
   .main-image img {
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 
   .guide_images {
     width: auto;
-    height: 700px;
+    height: 100%;
   }
 
-  .guide_image_text {
+  .guide_image {
     margin-bottom: 4rem;
+  }
+
+  .image {
+    height: 700px;
+    background-color: red;
   }
 }
 

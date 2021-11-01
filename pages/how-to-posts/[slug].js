@@ -1,9 +1,8 @@
 import { sanityClient, PortableText } from "../../sanity";
 import Image from "../../components/Image";
-// import styles from "../../styles/how-to-posts.module.css";
 
 const HowToPost = ({
-  title,
+  pageTitle,
   slug,
   id,
   howToIntroduction,
@@ -11,20 +10,18 @@ const HowToPost = ({
   images,
   extraInformation,
 }) => {
-  console.log(images);
-
   return (
     <>
       <div className="main_container">
-        <h1>{title}</h1>
+        <h1>{pageTitle}</h1>
         <div className="main_image_container">
           <PortableText blocks={howToIntroduction} className="intro" />
           <Image identifier="main-image" image={mainImage} alt="" />
         </div>
         {images && (
           <div className="guide_images">
-            {images.map(({ _key, asset, topCaption, bottomCaption }, image) => (
-              <div key={_key} className="guide_image_text">
+            {images.map(({ _key, asset, topCaption }, image) => (
+              <div key={_key} className="guide_image">
                 <PortableText blocks={topCaption} />
                 <Image key={_key} identifier="image" image={asset} alt="" />
               </div>
@@ -41,8 +38,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
 
   const query = `*[ _type == "howto" && slug.current == $pageSlug][0]{
-    siteName,
-    title,
+    pageTitle,
     slug,
     id,
     howToIntroduction,
@@ -61,7 +57,7 @@ export const getServerSideProps = async (pageContext) => {
   } else {
     return {
       props: {
-        title: howto.title,
+        pageTitle: howto.pageTitle,
         slug: howto.slug,
         id: howto.id,
         howToIntroduction: howto.howToIntroduction,
