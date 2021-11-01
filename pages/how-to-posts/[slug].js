@@ -4,7 +4,6 @@ import Image from "../../components/Image";
 // import styles from "../../styles/how-to-posts.module.css";
 
 const HowToPost = ({
-  siteName,
   title,
   slug,
   id,
@@ -67,7 +66,6 @@ export const getServerSideProps = async (pageContext) => {
   } else {
     return {
       props: {
-        siteName: howto.siteName,
         title: howto.title,
         slug: howto.slug,
         id: howto.id,

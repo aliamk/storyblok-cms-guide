@@ -8,6 +8,26 @@ import { sanityClient, PortableText } from "../sanity";
 import { urlFor } from "../sanity";
 import styles from "../styles/Home.module.css";
 
+const serializers = {
+  marks: {
+    internalLink: ({ mark, children }) => {
+      const { slug = {} } = mark;
+      const href = `/${slug.current}`;
+      return <a href={href}>{children}</a>;
+    },
+    link: ({ mark, children }) => {
+      const { blank, href } = mark;
+      return blank ? (
+        <a href={href} target="_blank" rel="noreferrer">
+          {children}
+        </a>
+      ) : (
+        <a href={href}>{children}</a>
+      );
+    },
+  },
+};
+
 const Home = ({ howToPosts }) => {
   return (
     <>
@@ -18,6 +38,7 @@ const Home = ({ howToPosts }) => {
               key={howToPost._id}
               blocks={howToPost.homepageIntroduction}
               className={styles.instructions}
+              serializers={serializers}
             />
           ))}
         </div>
