@@ -18,8 +18,8 @@ a {
   box-sizing: border-box;
 }
 
-/* Toolbar */
-.toolbar {
+/* navbar */
+.navbar {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -175,7 +175,7 @@ a {
 
   .main_image_container {
     max-width: 1440px;
-    height: 500px;
+    height: 700px;
     overflow: hidden;
     margin-bottom: 3rem;
     overflow: hidden;
@@ -186,7 +186,7 @@ a {
   }
 
   .main-image img {
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 }
@@ -196,7 +196,7 @@ a {
 } */
 
 @media only screen and (min-width: 800px) {
-  .toolbar {
+  .navbar {
     margin-bottom: 5.563rem;
   }
 
@@ -255,7 +255,7 @@ a {
 
   .main_image_container {
     max-width: 1440px;
-    height: 700px;
+    height: 1000px;
   }
 
   .main-image img {

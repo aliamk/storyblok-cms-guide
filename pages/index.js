@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/link-passhref */
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { sanityClient, PortableText, serializers } from "../sanity";
 import { urlFor } from "../sanity";
@@ -51,7 +49,7 @@ const Home = ({ howToPosts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = `*[ _type == "howto"]`;
+  const query = `*[ _type == "howto"] | order(_createdAt asc)`;
   const howToPosts = await sanityClient.fetch(query);
 
   if (!howToPosts.length) {

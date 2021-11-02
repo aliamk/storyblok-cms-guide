@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Toolbar from "../components/Toolbar";
+import Toolbar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const MyApp = ({ Component, pageProps }) => {
