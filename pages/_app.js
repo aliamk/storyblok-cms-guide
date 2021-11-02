@@ -1,11 +1,11 @@
 import "../styles/globals.css";
-import Toolbar from "../components/NavBar";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
-      <Toolbar />
+      <NavBar />
       <Component {...pageProps} />
       <Footer />
     </>

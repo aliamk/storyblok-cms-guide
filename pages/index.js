@@ -29,7 +29,7 @@ const Home = ({ howToPosts }) => {
             {howToPosts.map((howToPost, index) => (
               <>
                 <div className={styles.card}>
-                  <h3>{howToPost.pageTitle}</h3>
+                  <h3 className={styles.page_title}>{howToPost.pageTitle}</h3>
                   <Link href={`how-to-posts/${howToPost.slug.current}`}>
                     <div key={howToPost._id} className={styles.post}>
                       <img

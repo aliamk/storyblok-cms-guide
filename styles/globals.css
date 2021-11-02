@@ -209,11 +209,6 @@ a {
   .flex_container {
     justify-content: flex-start;
   }
-
-  .main,
-  h3 {
-    max-width: 400px;
-  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -251,9 +246,6 @@ a {
   .c_2 {
     padding: 1.563rem 10.563rem 0 10.563rem;
   }
-  .main h3 {
-    max-width: 400px;
-  }
 
   .main_container {
     max-width: 1440px;
@@ -263,7 +255,7 @@ a {
 
   .main_image_container {
     max-width: 1440px;
-    height: 1000px;
+    /* height: 1000px; */
   }
 
   .main-image img {
@@ -277,7 +269,7 @@ a {
   }
 
   .guide_image {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   .image {
