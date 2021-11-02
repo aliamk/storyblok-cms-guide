@@ -209,6 +209,11 @@ a {
   .flex_container {
     justify-content: flex-start;
   }
+
+  .main,
+  h3 {
+    max-width: 400px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -245,6 +250,9 @@ a {
 
   .c_2 {
     padding: 1.563rem 10.563rem 0 10.563rem;
+  }
+  .main h3 {
+    max-width: 400px;
   }
 
   .main_container {
