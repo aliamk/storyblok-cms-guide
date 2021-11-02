@@ -132,7 +132,7 @@ a {
 }
 
 .guide_image {
-  margin-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .image img {
@@ -268,13 +268,9 @@ a {
     height: 100%;
   }
 
-  .guide_image {
-    margin-bottom: 4rem;
-  }
-
   .image {
     height: 700px;
-    background-color: red;
+    /* background-color: red; */
   }
 }
 

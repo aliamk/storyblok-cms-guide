@@ -9,6 +9,7 @@ import { urlFor } from "../sanity";
 import styles from "../styles/Home.module.css";
 
 const Home = ({ howToPosts }) => {
+  console.log(howToPosts);
   return (
     <>
       {howToPosts && (
@@ -50,7 +51,7 @@ const Home = ({ howToPosts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[ _type == "howto"]';
+  const query = `*[ _type == "howto"]`;
   const howToPosts = await sanityClient.fetch(query);
 
   if (!howToPosts.length) {

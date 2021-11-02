@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import siteConfig from "../siteConfig";
 
 const Toolbar = () => {
   const router = useRouter();
@@ -7,7 +8,7 @@ const Toolbar = () => {
     <div className="toolbar">
       <div className="logo_container" onClick={() => router.push("/")}>
         <div className="logo"></div>
-        <div className="site_name">ON x Cervest - Storyblok CMS Guide</div>
+        <div className="site_name">{siteConfig.siteName}</div>
       </div>
     </div>
   );
