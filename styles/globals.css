@@ -155,7 +155,7 @@ a {
 
   .site_name {
     font-size: 25px;
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
 
   .footer {
@@ -175,7 +175,7 @@ a {
 
   .main_image_container {
     max-width: 1440px;
-    height: 700px;
+    height: auto;
     overflow: hidden;
     margin-bottom: 3rem;
     overflow: hidden;
@@ -187,7 +187,7 @@ a {
 
   .main-image img {
     height: 100%;
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -260,7 +260,7 @@ a {
 
   .main-image img {
     height: 100%;
-    width: auto;
+    width: 100%;
   }
 
   .guide_images {
