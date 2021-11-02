@@ -49,7 +49,7 @@ const Home = ({ howToPosts }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = `*[ _type == "howto"] | order(_createdAt asc)`;
+  const query = `*[ _type == "howto"] | order(id)`;
   const howToPosts = await sanityClient.fetch(query);
 
   if (!howToPosts.length) {
