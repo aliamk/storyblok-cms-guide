@@ -53,10 +53,6 @@ a {
   border-radius: 10px;
 }
 
-.logo:hover {
-  box-shadow: rgb(0 0 0 /3%) 0 6px 16px;
-}
-
 .site_name {
   font-size: 20px;
   margin-top: 1.5rem;

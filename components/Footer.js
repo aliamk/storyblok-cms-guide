@@ -17,7 +17,11 @@ const Footer = () => {
           <br />
           13 Soames Walk, London, SE10 0AX
         </div>
-        <div className="c_3">hello@madebyon.com</div>
+        <div className="c_3">
+          <a href="mailto:hello@madebyon.com?subject=Assistance with the Cervest-Storyblok CMS Guide">
+            hello@madebyon.com
+          </a>
+        </div>
       </div>
     </div>
   );
