@@ -245,7 +245,6 @@ a {
 
   .main_container {
     max-width: 1440px;
-    max-width: calc(100vw - 25px);
     margin: 0 auto;
   }
 
