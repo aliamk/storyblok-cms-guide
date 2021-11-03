@@ -274,6 +274,9 @@ a {
 }
 
 @media only screen and (min-width: 1450px) {
+  .main_container {
+    padding: 0;
+  }
   .flex_container {
     justify-content: flex-start;
     padding-left: 0;
