@@ -10,7 +10,13 @@ const Footer = () => {
         <div className="c_1">
           ON
           <br />
-          <a href="www.madebyon.com">madebyon.com</a>
+          <a
+            href="https://www.madebyon.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            madebyon.com
+          </a>
         </div>
         <div className="c_2">
           Bureau, C3, Design District,
